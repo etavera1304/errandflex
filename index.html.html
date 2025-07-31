@@ -23,20 +23,58 @@
         .service-list li {
             margin-bottom: 10px;
         }
+        .testimonial {
+            background: #ffffff;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #27ae60;
+        }
+        .map-container {
+            margin: 20px 0;
+            border: 2px solid #ccc;
+        }
+        .info-box {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 4px solid #2e7d32;
+            margin: 20px 0;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
         footer {
             text-align: center;
             font-size: 14px;
             color: #888;
             margin-top: 40px;
         }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            color: #27ae60;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>ErrandFlex</h1>
-    <p><strong>📦 Same-Day Local Errand Service</strong></p>
-    <p>Fast, flexible help with your everyday tasks — done today.</p>
+    <div class="logo">📦 ErrandFlex</div>
+    <p style="text-align:center;"><strong>Same-Day Local Errand Service</strong></p>
+    <p style="text-align:center;">Fast, flexible help with your everyday tasks — done today.</p>
 </header>
 
 <section>
@@ -54,9 +92,47 @@
 </section>
 
 <section>
+    <h2>Service Area</h2>
+    <div class="info-box">
+        Currently serving <strong>Pottstown, Sanatoga, and surrounding areas</strong>.  
+        More locations coming soon!
+    </div>
+</section>
+
+<section>
+    <h2>See Where We Operate</h2>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed/v1/place?q=Pottstown,PA&key=AIzaSyB" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<section>
+    <h2>Happy Customers</h2>
+    <div class="testimonial">“They picked up my Amazon return in less than an hour. Super easy!”</div>
+    <div class="testimonial">“Fast and friendly — definitely using ErrandFlex again.”</div>
+    <div class="testimonial">“Saved me two hours of errands on a busy Friday. Worth every dollar!”</div>
+</section>
+
+<section>
     <h2>How to Order</h2>
     <p>Fill out our quick form with your request and we'll text you to confirm.</p>
     <a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdt9tjITZdw6r0MPCQGdX_7IKI-_bKmxhMsVfvijB0HsETrsA/viewform?usp=header" target="_blank">Submit an Errand</a>
+</section>
+
+<section>
+    <h2>Contact Us</h2>
+    <form action="mailto:ed@example.com" method="post" enctype="text/plain">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
 </section>
 
 <section>
